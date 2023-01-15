@@ -5,7 +5,6 @@ package com.zaynsolutions.grpc;
 
 message ProductRequest {
   int32 product_id = 1;
-
 }
 
 message ProductResponse {
@@ -13,9 +12,6 @@ message ProductResponse {
   string product_name = 2;
   string product_price = 3;
 }
-
-
-
 
 service ProductService {
   rpc product(ProductRequest) returns (ProductResponse);

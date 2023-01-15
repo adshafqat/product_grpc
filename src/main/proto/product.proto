@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.zaynsolutions.grpc;
+
+message ProductRequest {
+  int32 product_id = 1;
+
+}
+
+message ProductResponse {
+  int32 product_id = 1;
+  string product_name = 2;
+  string product_price = 3;
+}
+
+
+
+
+service ProductService {
+  rpc product(ProductRequest) returns (ProductResponse);
+}

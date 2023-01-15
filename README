@@ -1,0 +1,15 @@
+
+MVN build
+mvn -DskipTests package
+
+To Run Server
+mvn -DskipTests package exec:java -Dexec.mainClass=com.zaynsolutions.grpc.App
+
+Please note, you can't server from curl because GRPC requires HTTP 2
+
+To Access Server from a Client
+mvn -DskipTests package exec:java -Dexec.mainClass=com.zaynsolutions.grpc.Client
+
+
+Google Tutorial
+https://codelabs.developers.google.com/codelabs/cloud-grpc-java/#2
